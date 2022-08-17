@@ -27,7 +27,7 @@ std::array<us, 13 * PLAYERS> makePack()
 }
 
 /**
- * Distiutes shuffled cards amongst players, similar to in real life.
+ * Distributes shuffled cards amongst players, similar to in real life.
  *
  * @param pack Array of unsigned shorts with value [0,12]
  * @return Array of arrays unsigned shorts with value [0,12] of length 13.
@@ -76,7 +76,7 @@ unsigned simulateGames(unsigned &seed)
         // Distribute cards
         std::array<std::array<us, 13>, PLAYERS> hands = distributeCards(pack);
 
-        // Count occurences of each card in each hand individually
+        // Count occurrences of each card in each hand individually
         std::array<std::map<us, us>, PLAYERS> counts;
         for (us i = 0; i < PLAYERS; i++)
             for (us &card : hands[i])
